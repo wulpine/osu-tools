@@ -10,6 +10,7 @@ using osu.Framework.Graphics;
 using osu.Framework.Graphics.Containers;
 using osu.Framework.Graphics.Shapes;
 using osu.Framework.Graphics.Sprites;
+using osu.Game.Beatmaps;
 using osu.Game.Graphics.Containers;
 using osu.Game.Graphics.Sprites;
 using osu.Game.Overlays;
@@ -31,6 +32,9 @@ namespace PerformanceCalculatorGUI.Screens.ObjectInspection
     {
         [Resolved]
         private Bindable<IReadOnlyList<Mod>> appliedMods { get; set; }
+
+        [Resolved]
+        private BeatmapDifficulty beatmapDifficulty { get; set; }
 
         [Resolved]
         private Track track { get; set; }
